@@ -12,15 +12,15 @@ namespace loginAndRegistration.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            return View();
+            using (ourDbContext db = new ourDbContext())
+            {
+                return View(db.userAccount.ToList());
+            }
         }
 
         public ActionResult Register()
         {
-            using (ourDbContext db= new ourDbContext())
-            {
-                return View(db.userAccount.ToList());
-            }
+            return View();
         }
 
         [HttpPost]
