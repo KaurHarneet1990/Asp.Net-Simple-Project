@@ -18,7 +18,11 @@ namespace asp.netProject.Controllers
             //Views in an mvc application
         public ActionResult Index()
         {
-            ViewBag.Countries = new List<string>()
+            //using ViewData
+            ViewData["Countries"]= new List<string>()
+            //using ViewBag
+            //ViewBag.Countries = new List<string>()
+            
             {
                 "Nepal",
                 "USA",

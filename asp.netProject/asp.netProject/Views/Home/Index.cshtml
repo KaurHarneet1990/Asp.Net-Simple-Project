@@ -5,7 +5,10 @@
 
 <h2>Countries List</h2>
 <ul>
-    @foreach (string strCountry in ViewBag.Countries)
+    @*using ViewBag*@
+    @*@foreach (string strCountry in ViewBag.Countries)*@
+    @*using viewData*@
+    @foreach (string strCountry in (List<string>) ViewData["Countries"])
     {
         <li>@strCountry</li>
     }
