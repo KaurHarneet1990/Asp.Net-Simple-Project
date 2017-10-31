@@ -9,9 +9,24 @@ namespace asp.netProject.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        //MVC version
+        //public string Index()
+        //{
+        //    return typeof(Controller).Assembly.GetName().Version.ToString();
+        //}
+
+            //Views in an mvc application
+        public ActionResult Index()
         {
-            return typeof(Controller).Assembly.GetName().Version.ToString();
+            ViewBag.Countries = new List<string>()
+            {
+                "Nepal",
+                "USA",
+                "Australia",
+                "Newzealand"
+            };
+            return View();
         }
+        
     }
 }
