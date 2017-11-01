@@ -9,6 +9,13 @@ namespace asp.netProject.Controllers
 {
     public class EmployeeController : Controller
     {
+        public ActionResult Index()
+        {
+            EmployeeContext employeeContextKoObject = new EmployeeContext();
+            List< Employee > employees = employeeContextKoObject.abcd.ToList();
+            //Employee employee = employeeContext.Employees.Single(emp => emp.EmployeeId == id);
+            return View(employees);
+        }
         // GET: Employee
         public ActionResult Details(int id)
         {
