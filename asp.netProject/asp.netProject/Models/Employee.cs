@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace asp.netProject.Models
 {
+    [Table("tblEmployee")]
     public class Employee
     {
         public int EmployeeId { get; set; }

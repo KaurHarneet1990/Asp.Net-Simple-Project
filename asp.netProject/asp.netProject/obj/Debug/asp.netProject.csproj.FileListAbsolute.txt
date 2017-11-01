@@ -42,3 +42,7 @@ D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\o
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\obj\Debug\asp.netProject.csproj.CoreCompileInputs.cache
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\obj\Debug\asp.netProject.dll
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\obj\Debug\asp.netProject.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\bin\EntityFramework.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\bin\EntityFramework.SqlServer.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\bin\EntityFramework.xml
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\asp.netProject\asp.netProject\bin\EntityFramework.SqlServer.xml
