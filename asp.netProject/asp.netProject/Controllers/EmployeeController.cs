@@ -16,6 +16,7 @@ namespace asp.netProject.Controllers
             //Employee employee = employeeContext.Employees.Single(emp => emp.EmployeeId == id);
             return View(employees);
         }
+        //For Details
         // GET: Employee
         public ActionResult Details(int id)
         {
