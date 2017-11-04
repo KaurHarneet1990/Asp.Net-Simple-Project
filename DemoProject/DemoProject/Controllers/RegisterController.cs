@@ -25,11 +25,11 @@ namespace DemoProject.Controllers
             return View();
         }
 
-        public ActionResult dekhaune()
+        public ActionResult dekhaune(int id)
         {
 
-            // Register obj = dbAccessClass.register.Where(x=>x.UserID==id).SelectMany();
-            //List<Register> obj = dbAccessClass.register.SqlQuery("Select * from registers where UserID = @p0", id).ToList();
+             //Register obj = dbAccessClass.register.Where(x=>x.UserID==id).SelectMany();
+           // List<Register> obj = dbAccessClass.register.SqlQuery("Select * from registers where UserID = @p0", id).ToList();
             Register obj1 = dbAccessClass.register.SingleOrDefault();
 
             return View(obj1);
