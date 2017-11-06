@@ -26,7 +26,7 @@ namespace asp.netProject.Controllers
             //Employee employee = employeeContext.Employees.Single(emp => emp.EmployeeId == id);
             return View(employee);
         }
-
+        //hardcoded data
         public ActionResult see()
         {
             Employee nayaemp = new Employee();
