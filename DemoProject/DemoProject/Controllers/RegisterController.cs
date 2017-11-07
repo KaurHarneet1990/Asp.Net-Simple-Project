@@ -11,11 +11,12 @@ namespace DemoProject.Controllers
     {
         public RegContext dbAccessClass = new RegContext();
         // GET: Register
+        
         public ActionResult Index()
         {
             return View();
         }
-
+        //save to database
         [HttpPost]
         public ActionResult inputToDb(Register reg)
         {
