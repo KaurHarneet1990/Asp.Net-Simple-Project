@@ -10,6 +10,7 @@ namespace loginAndRegistration.Controllers
     public class AccountController : Controller
     {
         // GET: Account
+        //List item
         public ActionResult Index()
         {
             using (ourDbContext db = new ourDbContext())
@@ -30,6 +31,7 @@ namespace loginAndRegistration.Controllers
             {
                 using (ourDbContext db = new ourDbContext())
                 {
+                    //add data in database
                     db.userAccount.Add(account);
                     db.SaveChanges();
                 }
