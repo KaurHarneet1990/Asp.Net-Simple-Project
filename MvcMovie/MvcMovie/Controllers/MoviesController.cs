@@ -66,6 +66,7 @@ namespace MvcMovie.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             MvcMovies mvcMovies = db.Movies.Find(id);
+            //if name of movies doesnot match the name in database i.e.
             if (mvcMovies == null)
             {
                 return HttpNotFound();
