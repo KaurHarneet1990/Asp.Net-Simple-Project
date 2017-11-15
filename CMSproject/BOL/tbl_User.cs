@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-    public class tbl_User
+    public partial class tbl_User
     {
         [Key]
         public int UserId { get; set; }

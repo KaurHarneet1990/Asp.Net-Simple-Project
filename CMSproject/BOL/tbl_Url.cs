@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-    public class tbl_Url
+    public partial class tbl_Url
     {
         [Key]
         public int UrlId { get; set; }
@@ -16,6 +16,7 @@ namespace BOL
         public string UrlDesc { get; set; }
         public Nullable<int> CategoryId { get; set; }
         public Nullable<int> UserId { get; set; }
+        public string IsApproved { get; set; }
         public virtual tbl_Category tbl_Category { get; set; }
         public virtual tbl_User tbl_User { get; set; }
     }

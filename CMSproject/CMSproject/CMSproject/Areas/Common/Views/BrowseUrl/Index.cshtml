@@ -1,0 +1,48 @@
+﻿@model IEnumerable<BOL.tbl_Url>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>URLs</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_Category.CategoryName)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.UrlITitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrlDesc)
+        </th>
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_Category.CategoryName)
+        </td>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlITitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrlDesc)
+        </td>
+        
+    </tr>
+}
+
+</table>

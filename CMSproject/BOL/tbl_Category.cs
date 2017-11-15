@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-   public class tbl_Category
+   public partial class tbl_Category
     {
+        //public tbl_Category()
+        //{
+        //    this.tbl_Url = new HashSet<tbl_Url>();
+        //}
         [Key]
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }

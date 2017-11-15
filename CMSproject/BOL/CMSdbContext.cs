@@ -10,8 +10,8 @@ namespace BOL
 {
     public class CMSdbContext : DbContext
     {
-        public DbSet<tbl_Category> Category { get; set; }
-        public DbSet<tbl_User> User { get; set; }
-        public DbSet<tbl_Url> Url { get; set; }
+        public DbSet<tbl_Category> TableCategory { get; set; }
+        public DbSet<tbl_User> TableUser { get; set; }
+        public DbSet<tbl_Url> TableUrl { get; set; }
     }
 }
