@@ -1,0 +1,11 @@
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\BOL.dll.config
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\BOL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\BOL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\EntityFramework.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\EntityFramework.SqlServer.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\EntityFramework.xml
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\EntityFramework.SqlServer.xml
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache

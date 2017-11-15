@@ -1,0 +1,17 @@
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\bin\Debug\DAL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\bin\Debug\DAL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\obj\Debug\DAL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\DAL\obj\Debug\DAL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\DAL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\DAL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\obj\Debug\DAL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\obj\Debug\DAL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\DAL.dll.config
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\EntityFramework.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\EntityFramework.xml
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\DAL\bin\Debug\EntityFramework.SqlServer.xml
