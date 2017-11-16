@@ -17,7 +17,7 @@ namespace CMSproject.Areas.Common.Controllers
         // GET: Common/BrowseUrl
         public ActionResult Index()
         {
-            var url = objBll.GetAll();
+            var url = objBll.GetAll().Where(x=>x.IsApproved=="A").ToList();
             return View(url);
         }
     }
