@@ -56,3 +56,6 @@ D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSprojec
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\BOL.dll
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\BOL.pdb
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\BOL.dll.config
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\DAL.dll
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\DAL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\CMSproject\CMSproject\bin\DAL.dll.config
