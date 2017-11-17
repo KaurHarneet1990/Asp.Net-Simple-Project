@@ -20,7 +20,7 @@ namespace CMSproject.Areas.Common.Controllers
             ViewBag.SortOrder = SortOrder;
             ViewBag.SortBy = SortBy;
             var url = objBll.GetAll().Where(x=>x.IsApproved=="A");
-            switch(SoryBy)
+            switch(SortBy)
             {
                 case"Title":
                     switch (SortOrder)
@@ -72,6 +72,7 @@ namespace CMSproject.Areas.Common.Controllers
 
 
             }
+            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Where(x => x.IsApproved == "A").Count() / 10.0);
             
             return View(url);
         }

@@ -49,3 +49,10 @@
 }
 
 </table>
+@{ 
+    double TotalPage = ViewBag.TotalPages;
+}
+@for (int i = 0; i < TotalPage; i++)
+{
+    <a>@i</a>
+}
