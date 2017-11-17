@@ -10,27 +10,27 @@
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.tbl_Category.CategoryName)
-        </th>
+        
        
         <th>
-            @Html.DisplayNameFor(model => model.UrlITitle)
+            @Html.ActionLink("UrlITitle","Index",new { SortOrder=(ViewBag.SortOrder==null?"ASC":(ViewBag.SortOrder=="ASC"?"DESC":"ASC")),SortBy="Title"})
+            
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Url)
+            @Html.ActionLink("Url", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "ASC" : (ViewBag.SortOrder == "ASC" ? "DESC" : "ASC")), SortBy = "Url" })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UrlDesc)
+            @Html.ActionLink("UrlDesc", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "ASC" : (ViewBag.SortOrder == "ASC" ? "DESC" : "ASC")), SortBy = "UrlDesc" })
+        </th>
+        <th>
+            @Html.ActionLink("CategoryName", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "ASC" : (ViewBag.SortOrder == "ASC" ? "DESC" : "ASC")), SortBy = "Category" })
         </th>
        
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.tbl_Category.CategoryName)
-        </td>
+        
        
         <td>
             @Html.DisplayFor(modelItem => item.UrlITitle)
@@ -40,6 +40,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UrlDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_Category.CategoryName)
         </td>
         
     </tr>
