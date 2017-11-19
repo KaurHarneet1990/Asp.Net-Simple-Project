@@ -15,7 +15,7 @@ namespace CMSproject.Areas.Common.Controllers
             objBll = new UrlBll();
         }
         // GET: Common/BrowseUrl
-        public ActionResult Index(string SortOrder,string SortBy)
+        public ActionResult Index(string SortOrder,string SortBy,string Page)
         {
             ViewBag.SortOrder = SortOrder;
             ViewBag.SortBy = SortBy;
@@ -31,6 +31,8 @@ namespace CMSproject.Areas.Common.Controllers
                         case "Desc":
                             url = url.OrderByDescending(x => x.UrlITitle).ToList();
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case "Category":
@@ -41,6 +43,8 @@ namespace CMSproject.Areas.Common.Controllers
                             break;
                         case "Desc":
                             url = url.OrderByDescending(x => x.tbl_Category.CategoryName).ToList();
+                            break;
+                        default:
                             break;
                     }
                     break;
@@ -53,6 +57,8 @@ namespace CMSproject.Areas.Common.Controllers
                         case "Desc":
                             url = url.OrderByDescending(x => x.Url).ToList();
                             break;
+                        default:
+                            break;
                     }
                     break;
                 case "UrlDesc":
@@ -64,6 +70,8 @@ namespace CMSproject.Areas.Common.Controllers
                         case "Desc":
                             url = url.OrderByDescending(x => x.UrlDesc).ToList();
                             break;
+                        default:
+                            break;
                     }
                     break;
                 default:
@@ -72,7 +80,10 @@ namespace CMSproject.Areas.Common.Controllers
 
 
             }
-            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Where(x => x.IsApproved == "A").Count() / 10.0);
+            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Where(x => x.IsApproved == "A").Count() / 4.0);
+            int page = int.Parse(Page == null ? "1" : Page);
+            ViewBag.Page = page;
+            url = url.Skip((page - 1) * 4).Take(4);
             
             return View(url);
         }
