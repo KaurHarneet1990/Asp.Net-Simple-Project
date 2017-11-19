@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,69 @@ namespace CMSproject.Areas.Admin.Controllers
 {
     public class ListCategoryController : Controller
     {
-        // GET: Admin/ListCategory
-        public ActionResult Index()
+        private CategoryBll objBll;
+        public ListCategoryController()
         {
-            return View();
+            objBll = new CategoryBll();
+        }
+        // GET: Admin/ListUser
+        public ActionResult Index(string SortOrder, string SortBy, string Page)
+        {
+            ViewBag.SortOrder = SortOrder;
+            ViewBag.SortBy = SortBy;
+            var category = objBll.GetAll();
+
+            switch (SortBy)
+            {
+                case "Category":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            category = category.OrderBy(x => x.CategoryName).ToList();
+                            break;
+                        case "Desc":
+                            category = category.OrderByDescending(x => x.CategoryName).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case "CategoryDesc":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            category = category.OrderBy(x => x.CategoryDesc).ToList();
+                            break;
+                        case "Desc":
+                            category = category.OrderByDescending(x => x.CategoryDesc).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    category = category.OrderBy(x => x.CategoryName).ToList();
+                    break;
+            }
+            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Count() / 4.0);
+            int page = int.Parse(Page == null ? "1" : Page);
+            ViewBag.Page = page;
+            category = category.Skip((page - 1) * 4).Take(4);
+            return View(category);
+        }
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                objBll.Delete(id);
+                TempData["Msg"] = "Deleted Sucessfully";
+                return RedirectToAction("Index");
+            }
+            catch(Exception el)
+            {
+                TempData["Msg"] = "Delete Failed : " + el.Message;
+                return RedirectToAction("Index");
+            }
         }
     }
 }
