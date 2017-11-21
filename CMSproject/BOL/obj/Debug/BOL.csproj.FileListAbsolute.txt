@@ -8,3 +8,4 @@ D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\bin\Debug\Entity
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.dll
 D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.pdb
+D:\gitFile\asp.netProject\Asp.Net-Simple-Project\CMSproject\BOL\obj\Debug\BOL.csprojResolveAssemblyReference.cache

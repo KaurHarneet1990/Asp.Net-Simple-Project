@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BOL
 {
-   public partial class tbl_Category
+   public class tbl_Category
     {
         //public tbl_Category()
         //{
@@ -15,7 +15,10 @@ namespace BOL
         //}
         [Key]
         public int CategoryId { get; set; }
+        [Required (ErrorMessage ="Category Name is required.")]
+        [Display (Name="Category Name")]
         public string CategoryName { get; set; }
+        [Display(Name = "Category Description")]
         public string CategoryDesc { get; set; }
         public virtual ICollection<tbl_Url> tbl_Url { get; set; }
     }
