@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using BOL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,14 +10,38 @@ namespace CMSproject.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
+        private CategoryBll objBll;
+        public CategoryController()
+        {
+            objBll = new CategoryBll();
+        }
         // GET: Admin/Category
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Create()
+        [HttpPost]
+        public ActionResult Create(tbl_Category category)
         {
-            return View();
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    objBll.Insert(category);
+                    TempData["Msg"] = "Created Sucessfully";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View("Index");
+                }
+            }
+            catch (Exception el)
+            {
+                TempData["Msg"] = "Cannot Created : " + el.Message;
+                return RedirectToAction("Index");
+            }
+           
         }
     }
 }

@@ -15,7 +15,7 @@ namespace BOL
         //}
         [Key]
         public int CategoryId { get; set; }
-        [Required (ErrorMessage ="Category Name is required.")]
+        [Required]
         [Display (Name="Category Name")]
         public string CategoryName { get; set; }
         [Display(Name = "Category Description")]
