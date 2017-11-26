@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class AdminBll:BaseBll
+    public class SecurityBll: BaseBll
     {
-        
     }
 }
