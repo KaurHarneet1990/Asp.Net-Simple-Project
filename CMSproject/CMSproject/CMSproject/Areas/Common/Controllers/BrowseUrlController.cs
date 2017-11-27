@@ -9,17 +9,17 @@ namespace CMSproject.Areas.Common.Controllers
 {
     public class BrowseUrlController : Controller
     {
-        private UrlBll objBll;
+        private CommonBll objBll;
         public BrowseUrlController()
         {
-            objBll = new UrlBll();
+            objBll = new CommonBll();
         }
         // GET: Common/BrowseUrl
         public ActionResult Index(string SortOrder,string SortBy,string Page)
         {
             ViewBag.SortOrder = SortOrder;
             ViewBag.SortBy = SortBy;
-            var url = objBll.GetAll().Where(x=>x.IsApproved=="A");
+            var url = objBll.urlBll.GetAll().Where(x=>x.IsApproved=="A");
             switch(SortBy)
             {
                 case"Title":
@@ -80,7 +80,7 @@ namespace CMSproject.Areas.Common.Controllers
 
 
             }
-            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Where(x => x.IsApproved == "A").Count() / 4.0);
+            ViewBag.TotalPages = Math.Ceiling(objBll.urlBll.GetAll().Where(x => x.IsApproved == "A").Count() / 4.0);
             int page = int.Parse(Page == null ? "1" : Page);
             ViewBag.Page = page;
             url = url.Skip((page - 1) * 4).Take(4);

@@ -7,19 +7,15 @@ using System.Web.Mvc;
 
 namespace CMSproject.Areas.Admin.Controllers
 {
-    public class ListCategoryController : Controller
+    public class ListCategoryController : BaseAdminController
     {
-        private CategoryBll objBll;
-        public ListCategoryController()
-        {
-            objBll = new CategoryBll();
-        }
+        
         // GET: Admin/ListUser
         public ActionResult Index(string SortOrder, string SortBy, string Page)
         {
             ViewBag.SortOrder = SortOrder;
             ViewBag.SortBy = SortBy;
-            var category = objBll.GetAll();
+            var category = objBll.categoryBll.GetAll();
 
             switch (SortBy)
             {
@@ -53,7 +49,7 @@ namespace CMSproject.Areas.Admin.Controllers
                     category = category.OrderBy(x => x.CategoryName).ToList();
                     break;
             }
-            ViewBag.TotalPages = Math.Ceiling(objBll.GetAll().Count() / 4.0);
+            ViewBag.TotalPages = Math.Ceiling(objBll.categoryBll.GetAll().Count() / 4.0);
             int page = int.Parse(Page == null ? "1" : Page);
             ViewBag.Page = page;
             category = category.Skip((page - 1) * 4).Take(4);
@@ -63,7 +59,7 @@ namespace CMSproject.Areas.Admin.Controllers
         {
             try
             {
-                objBll.Delete(id);
+                objBll.categoryBll.Delete(id);
                 TempData["Msg"] = "Deleted Sucessfully";
                 return RedirectToAction("Index");
             }

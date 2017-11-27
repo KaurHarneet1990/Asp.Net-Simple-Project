@@ -8,13 +8,9 @@ using System.Web.Mvc;
 
 namespace CMSproject.Areas.Admin.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoryController : BaseAdminController
     {
-        private CategoryBll objBll;
-        public CategoryController()
-        {
-            objBll = new CategoryBll();
-        }
+       
         // GET: Admin/Category
         public ActionResult Index()
         {
@@ -27,7 +23,7 @@ namespace CMSproject.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    objBll.Insert(category);
+                    objBll.categoryBll.Insert(category);
                     TempData["Msg"] = "Created Sucessfully";
                     return RedirectToAction("Index");
                 }

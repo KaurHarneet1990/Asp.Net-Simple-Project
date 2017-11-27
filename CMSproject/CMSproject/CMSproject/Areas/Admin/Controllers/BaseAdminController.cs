@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,10 @@ namespace CMSproject.Areas.Admin.Controllers
 {
     public class BaseAdminController : Controller
     {
-        // GET: Admin/BaseAdmin
-        public ActionResult Index()
+        protected AdminBll objBll;
+        public BaseAdminController()
         {
-            return View();
+            objBll = new AdminBll();
         }
     }
 }

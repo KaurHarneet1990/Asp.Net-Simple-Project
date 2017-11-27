@@ -48,9 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminBll.cs" />
+    <Compile Include="BaseBll.cs" />
     <Compile Include="CategoryBll.cs" />
+    <Compile Include="CommonBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityBll.cs" />
     <Compile Include="UrlBll.cs" />
+    <Compile Include="UserAreaBll.cs" />
     <Compile Include="UserBll.cs" />
   </ItemGroup>
   <ItemGroup>
