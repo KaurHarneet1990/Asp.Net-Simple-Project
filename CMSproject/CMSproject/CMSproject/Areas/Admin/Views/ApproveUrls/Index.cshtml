@@ -5,18 +5,56 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<script>
+    function ConfirmApprove() {
+        return confirm("Are you sure you want to Approve?");
+    }
+    function ConfirmReject() {
+        return confirm("Are you sure you want to Reject?");
+    }
+</script>
+<h2>Manage Urls</h2>
+@if (TempData["Msg"] != null)
+{
+    <h4>
+        @TempData["Msg"].ToString()
+    </h4>
+}
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h4>
+    @if (ViewBag.Status == "P")
+    {
+        <b>@Html.ActionLink("Pending Urls","Index",new { Status="P"})</b>
+    }
+    else
+    {
+        @Html.ActionLink("Pending Urls", "Index", new { Status = "P" })
+    }
+    |
+    @if (ViewBag.Status == "A")
+    {
+        <b>@Html.ActionLink("Approved Urls", "Index", new { Status = "A" })</b>
+    }
+    else
+    {
+        @Html.ActionLink("Approved Urls", "Index", new { Status = "A" })
+    }
+    |
+    @if (ViewBag.Status == "R")
+    {
+        <b>@Html.ActionLink("Rejected Urls", "Index", new { Status = "R" })</b>
+    }
+    else
+    {
+        @Html.ActionLink("Rejected Urls", "Index", new { Status = "R" })
+    }
+</h4>
+
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.tbl_Category.CategoryName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.tbl_User.UserEmail)
+            Approve/Reject
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UrlITitle)
@@ -30,16 +68,19 @@
         <th>
             @Html.DisplayNameFor(model => model.IsApproved)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_User.UserEmail)
+        </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.tbl_Category.CategoryName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.tbl_User.UserEmail)
+            @Html.ActionLink("Approve", "Approve", new { id = item.UrlId }, new { onclick="return ConfirmApprove();"})|
+            @Html.ActionLink("Reject", "Reject", new { id = item.UrlId }, new { onclick = "return ConfirmReject();" })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UrlITitle)
@@ -54,10 +95,12 @@
             @Html.DisplayFor(modelItem => item.IsApproved)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UrlId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UrlId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UrlId })
+            @Html.DisplayFor(modelItem => item.tbl_Category.CategoryName)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_User.UserEmail)
+        </td>
+        
     </tr>
 }
 
