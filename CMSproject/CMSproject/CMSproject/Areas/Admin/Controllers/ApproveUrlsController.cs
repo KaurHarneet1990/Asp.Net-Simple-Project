@@ -23,5 +23,39 @@ namespace CMSproject.Areas.Admin.Controllers
                 return View(urls);
             }
         }
+        
+        public ActionResult Approve(int id)
+        {
+            try
+            {
+                var myUrl = objBll.urlBll.GetByID(id);
+                myUrl.IsApproved = "A";
+                objBll.urlBll.Update(myUrl);
+                TempData["Msg"] = "Approved Successfully";
+                return RedirectToAction("Index");
+            }
+            catch(Exception e1)
+            {
+                TempData["Msg"] = "Approved Failed : " + e1.Message;
+                return RedirectToAction("Index");
+            }
+        }
+
+        public ActionResult Reject(int id)
+        {
+            try
+            {
+                var myUrl = objBll.urlBll.GetByID(id);
+                myUrl.IsApproved = "R";
+                objBll.urlBll.Update(myUrl);
+                TempData["Msg"] = "Reject Successfully";
+                return RedirectToAction("Index");
+            }
+            catch (Exception e1)
+            {
+                TempData["Msg"] = "Rejection Failed : " + e1.Message;
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
