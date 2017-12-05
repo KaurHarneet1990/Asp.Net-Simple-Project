@@ -28,6 +28,7 @@ namespace CMSproject.Areas.Admin.Controllers
         {
             try
             {
+                //approve
                 var myUrl = objBll.urlBll.GetByID(id);
                 myUrl.IsApproved = "A";
                 objBll.urlBll.Update(myUrl);
