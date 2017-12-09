@@ -8,9 +8,10 @@ namespace CMSproject.Areas.Admin.Controllers
 {
     public class ApproveUrlsController : BaseAdminController
     {
-        // GET: Admin/ApproveUrls
+        // GET: Admin/ApproveUrls/index
         public ActionResult Index(string Status)
         {
+            
             ViewBag.Status = (Status == null ? "P" : Status);
             if (Status == null)
             {
